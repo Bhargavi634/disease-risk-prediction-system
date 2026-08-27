@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Diabetes Risk</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-5">
+  <h2>Diabetes Risk Questionnaire</h2>
+  <form method="post" action="/predict/diabetes">
+    <div class="mb-3"><label>Age</label><input class="form-control" name="age" type="number" required></div>
+    <div class="mb-3"><label>BMI</label><input class="form-control" name="bmi" type="number" step="0.1" required></div>
+    <div class="mb-3"><label>Glucose level</label><input class="form-control" name="glucose" type="number" step="0.1" required></div>
+    <div class="mb-3"><label>Gender</label><select class="form-select" name="gender"><option>male</option><option>female</option></select></div>
+    <button class="btn btn-primary">Get Risk</button>
+  </form>
+  <a href="/profile" class="btn btn-link mt-3">Back</a>
+</body>
+</html>
